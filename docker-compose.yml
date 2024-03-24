@@ -7,8 +7,4 @@ services:
     restart: always
     volumes:
       - ./config:/etc/gitlab-runner
-      - ./entrypoint.sh:/entrypoint.sh
       - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - CI_RUNNER_SHM_SIZE=512mb
-    entrypoint: ["/entrypoint.sh"]
