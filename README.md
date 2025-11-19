@@ -18,3 +18,10 @@ Save and exit the file.
 Next restart the gitlab runner.
 
 `docker-compose restart`
+
+
+## Docker runner.
+When selected the docker runner during registering of the gitlab-runner
+Make sure to edit the created config.toml
+[runners.docker]
+  volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
